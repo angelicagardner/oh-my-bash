@@ -1,14 +1,9 @@
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# Pip
-export PATH="$HOME/.local/bin:$PATH"
-
-# Go binary path
-export PATH=$PATH:/usr/local/go/bin
-
-#Set GOPATH, the workspace for Go projects
-export GOPATH=$HOME/go
-
-# Add GOPATH/bin path
-export PATH=$PATH:$GOPATH/bin
+# Automatically update LINES and COLUMNS after each command if the window size changes
+shopt -s checkwinsize
+# Automatically change to a directory if the command is a directory name
+shopt -s autocd
+# Correct minor spelling errors in directory names when using 'cd'
+shopt -s cdspell
