@@ -1,5 +1,3 @@
-# tokens
-
 # Pip
 export PATH="$HOME/.local/bin:$PATH"
 # Go binary path
@@ -18,5 +16,6 @@ HISTIGNORE="ls:cd:pwd:exit:*ls *:*cd *:*pwd *:*exit *"
 HISTCONTROL=ignoreboth:erasedups
 # Append to the history file, don't overwrite it
 shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 # Include timestamps in history
 export HISTTIMEFORMAT="%F %T "
